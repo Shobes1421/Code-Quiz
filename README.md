@@ -12,4 +12,3 @@ Good luck!
 
 
 
-![alt]images/Screen20%shot.png

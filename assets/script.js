@@ -29,27 +29,29 @@ var questions = [
 
 ];
 
-// variables for functions, scores and timers.
+var timeEl = document.querySelector(".time");
+var mainEl = document.getElementById("timeLeft");
 
-var score = 0;
-var currentQuestion = -1;
-var timeLeft = 0;
-var timer;
+var secondsLeft = 75;
 
-function start() {
+function setTime() {
+    var timerInterval = setInterval(function() {
+        secondsLeft--;
+        timeEl.textContent = secondsLeft;
 
-    timeLeft = 75;
-    document.getElementById("timeLeft").innerHTML = timeLeft;
+    if (secondsLeft === 0) {
+        clearInterval(timerInterval);
+        endTime();
+    }
 
-    timer = setInterval(function() {
-        timeLeft--;
-        document.getElementById("timeLeft").innerHTML = timeLeft;
-        //proceed to end the game function when timer is below 0 at any time
-        if (timeLeft <= 0) {
-            clearInterval(timer);
-            endGame(); 
-        }
-    }, 1000);
-
-    next();
+}, 1000);
 }
+
+setTime();
+
+
+
+
+
+
+

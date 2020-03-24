@@ -13,8 +13,10 @@
     <Header>
         <nav class="navbar navbar-light bg-light">
             <a href="highscores.html">View Highscores</a>
-            <div class="time">Time</div>
+            <h4 class="time">Time: </h4>
+            <div id="timeLeft"></div>
         </nav>
+
     </Header> 
 
     <div class="container">
@@ -23,8 +25,8 @@
                 <h2>Coding Quiz Challenge</h2>
                 <p>Try to answer the following code-related questions within the time limit. 
                     Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
-                    <li class="choicesLi"></li>
-                    <button onclick="startQuiz">Start Quiz</button>
+                    
+                    <button onclick="start()">Start Quiz</button>
             </div>
         </div>
 

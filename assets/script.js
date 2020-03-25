@@ -29,26 +29,29 @@ var questions = [
 
 ];
 
-var timeEl = document.querySelector(".time");
-var mainEl = document.getElementById("timeLeft");
+var timeLeft = 0;
+var timer;
 
-var secondsLeft = 75;
+function startQuiz() {
+    timeLeft = 75;
+    document.getElementById("timeLeft").innerHTML = timeLeft;
 
-function setTime() {
-    var timerInterval = setInterval(function() {
-        secondsLeft--;
-        timeEl.textContent = secondsLeft;
-
-    if (secondsLeft === 0) {
-        clearInterval(timerInterval);
-        endTime();
-    }
+    timer = setInterval(function() {
+        timeLeft--;
+        document.getElementById("timeLeft").innerHTML = timeLeft;
+        
+        if (timeLeft === 0) {
+            clearInterval(timer);
+            endTime(); 
+        }
 
 }, 1000);
+
+setTime();
 }
 
 
-setTime();
+
 
 
 

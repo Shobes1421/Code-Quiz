@@ -5,7 +5,7 @@ body {
 }
 
 .container {
-    align-self: center;
+    text-align: center;
 }
 
 /* index.html styling start */
@@ -14,14 +14,7 @@ h2 {
     font-weight: bold;
 }
 
-.row {
-    align-content: center;
-}
 
-.col-md-12 {
-    text-align: center;
-    margin-top: 50px;
-}
 
 p {
     margin-top: 20px;

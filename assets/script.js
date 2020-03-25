@@ -29,9 +29,10 @@ var questions = [
 
 ];
 
+// variables for the countdown
 var timeLeft = 0;
 var timer;
-
+//by pressing start quiz button,  the timer will start to countdown
 function startQuiz() {
     timeLeft = 75;
     document.getElementById("timeLeft").innerHTML = timeLeft;
@@ -39,8 +40,8 @@ function startQuiz() {
     timer = setInterval(function() {
         timeLeft--;
         document.getElementById("timeLeft").innerHTML = timeLeft;
-        
-        if (timeLeft === 0) {
+        //once the timer hits 0, the timer will stop
+        if (timeLeft <= 0) {
             clearInterval(timer);
             endTime(); 
         }
@@ -50,7 +51,10 @@ function startQuiz() {
 setTime();
 }
 
-
+// endTime function to run once time hits 0
+function endTime()  {
+    
+}
 
 
 
